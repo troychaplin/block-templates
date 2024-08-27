@@ -1,3 +1,5 @@
-<p <?php echo get_block_wrapper_attributes(); ?>>
-	<?php esc_html_e('Block Templates: Card Innerblock', 'block-templates'); ?>
-</p>
+<?php
+echo 'These are the individual innerblock attributes:';
+echo '<pre>';
+var_dump($attributes);
+echo '</pre>';

@@ -5,11 +5,22 @@
   "version": "0.1.0",
   "title": "Card Innerblock",
   "category": "text",
-  "icon": "smiley",
+  "icon": "embed-generic",
   "description": "Example of a card setup as a dynamic innerblock",
   "example": {},
+  "parent": [
+    "block-templates/card-grid"
+  ],
   "supports": {
     "html": false
+  },
+  "attributes": {
+    "info": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    }
   },
   "textdomain": "block-templates",
   "editorScript": "file:./index.js",

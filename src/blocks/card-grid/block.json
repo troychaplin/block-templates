@@ -5,7 +5,7 @@
 	"version": "0.1.0",
 	"title": "Card Grid",
 	"category": "text",
-	"icon": "smiley",
+	"icon": "columns",
 	"description": "Example of a card grid setup as a parent dynamic block",
 	"example": {},
 	"supports": {

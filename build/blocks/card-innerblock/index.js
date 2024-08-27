@@ -23,16 +23,54 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Edit() {
-  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
-  const innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useInnerBlocksProps)(blockProps, {
-    allowedBlocks: ['core/paragraph'],
-    template: [['core/paragraph']],
-    templateLock: 'all'
-  });
+function Edit({
+  attributes,
+  setAttributes
+}) {
+  const {
+    info,
+    desc
+  } = attributes;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...innerBlocksProps
-  });
+    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
+      className: `card-innerblock`
+    })
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    placeholder: "Add some information",
+    style: {
+      border: 'none',
+      padding: '0',
+      backgroundColor: 'transparent'
+    },
+    onChange: value => setAttributes({
+      info: value
+    }),
+    value: info,
+    allowedFormats: [],
+    disableLineBreaks: true
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    placeholder: "Add a description of the information",
+    style: {
+      border: 'none',
+      padding: '0',
+      backgroundColor: 'transparent'
+    },
+    onChange: value => setAttributes({
+      desc: value
+    }),
+    value: desc,
+    allowedFormats: [],
+    disableLineBreaks: true
+  }));
+
+  // const blockProps = useBlockProps();
+  // const innerBlocksProps = useInnerBlocksProps(blockProps, {
+  // 	allowedBlocks: ['core/paragraph'],
+  // 	template: [['core/paragraph']],
+  // 	templateLock: 'all',
+  // });
+
+  // return <div {...innerBlocksProps}></div>;
 }
 
 /***/ }),
@@ -156,7 +194,7 @@ module.exports = window["wp"]["i18n"];
   \***********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"block-templates/card-innerblock","version":"0.1.0","title":"Card Innerblock","category":"text","icon":"smiley","description":"Example of a card setup as a dynamic innerblock","example":{},"supports":{"html":false},"textdomain":"block-templates","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"block-templates/card-innerblock","version":"0.1.0","title":"Card Innerblock","category":"text","icon":"embed-generic","description":"Example of a card setup as a dynamic innerblock","example":{},"parent":["block-templates/card-grid"],"supports":{"html":false},"attributes":{"info":{"type":"string"},"desc":{"type":"string"}},"textdomain":"block-templates","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ })
 
