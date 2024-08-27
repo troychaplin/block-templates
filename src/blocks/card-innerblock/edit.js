@@ -4,11 +4,8 @@ import './editor.scss';
 
 export default function Edit() {
 	return (
-		<p {...useBlockProps()}>
-			{__(
-				'Block Templates: Card Innerblock',
-				'block-templates'
-			)}
+		<p { ...useBlockProps() }>
+			{ __( 'Block Templates: Card Innerblock', 'block-templates' ) }
 		</p>
 	);
 }

@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/card-grid/style-index.css","mappings":";;;AAAA;EACC;EACA;EACA;AACD,C","sources":["webpack://block-templates/./src/blocks/card-grid/style.scss"],"sourcesContent":[".wp-block-block-templates-card-grid {\n\tbackground-color: #9bcae0;\n\tcolor: #191919;\n\tpadding: 5px;\n}\n"],"names":[],"sourceRoot":""}

@@ -1,1 +1,1 @@
-console.log('Block Templates: Card Innerblock');
+console.log( 'Block Templates: Card Innerblock' );

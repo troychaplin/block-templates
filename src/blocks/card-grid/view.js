@@ -1,1 +1,1 @@
-console.log('Block Templates: Card Grid');
+console.log( 'Block Templates: Card Grid' );

@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/card-grid/index.css","mappings":";;;AAAA;EACC;AACD,C","sources":["webpack://block-templates/./src/blocks/card-grid/editor.scss"],"sourcesContent":[".wp-block-block-templates-card-grid.is-selected {\n\tborder: 5px dashed rgb(253, 211, 59);\n}\n"],"names":[],"sourceRoot":""}

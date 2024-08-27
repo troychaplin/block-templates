@@ -9,7 +9,17 @@
   "description": "Example of a card grid setup as a parent dynamic block",
   "example": {},
   "supports": {
-    "html": false
+    "html": false,
+    "align": false
+  },
+  "attributes": {
+    "numberOfColumns": {
+      "type": "number",
+      "default": 3
+    },
+    "blockHeader": {
+      "type": "string"
+    }
   },
   "textdomain": "block-templates",
   "editorScript": "file:./index.js",
