@@ -34,12 +34,14 @@ function Edit({
     numberOfColumns,
     blockHeader
   } = attributes;
-  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
-  const innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useInnerBlocksProps)(blockProps, {
-    allowedBlocks: ['core/paragraph'],
-    template: [['core/paragraph'], ['core/paragraph']],
-    templateLock: 'all'
-  });
+
+  // const blockProps = useBlockProps();
+  // const innerBlocksProps = useInnerBlocksProps( blockProps, {
+  // 	allowedBlocks: [ 'core/paragraph' ],
+  // 	template: [ [ 'core/paragraph' ], [ 'core/paragraph' ] ],
+  // 	templateLock: 'all',
+  // } );
+
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
     title: "Display Options"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
@@ -58,7 +60,9 @@ function Edit({
       numberOfColumns: value
     })
   }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...innerBlocksProps
+    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
+      className: `has-${numberOfColumns}-columns`
+    })
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, blockHeader && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, blockHeader), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
     allowedBlocks: ['block-templates/card-innerblock'],
     template: [['block-templates/card-innerblock'], ['block-templates/card-innerblock']]
@@ -196,7 +200,7 @@ module.exports = window["wp"]["i18n"];
   \*****************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"block-templates/card-grid","version":"0.1.0","title":"Card Grid","category":"design","icon":"smiley","description":"Example of a card grid setup as a parent dynamic block","example":{},"supports":{"html":false,"align":false},"attributes":{"numberOfColumns":{"type":"number","default":3},"blockHeader":{"type":"string"}},"textdomain":"block-templates","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"block-templates/card-grid","version":"0.1.0","title":"Card Grid","category":"text","icon":"smiley","description":"Example of a card grid setup as a parent dynamic block","example":{},"supports":{"html":false,"align":false},"attributes":{"numberOfColumns":{"type":"number","default":3},"blockHeader":{"type":"string"}},"textdomain":"block-templates","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ })
 

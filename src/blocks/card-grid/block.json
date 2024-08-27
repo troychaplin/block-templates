@@ -4,7 +4,7 @@
 	"name": "block-templates/card-grid",
 	"version": "0.1.0",
 	"title": "Card Grid",
-	"category": "design",
+	"category": "text",
 	"icon": "smiley",
 	"description": "Example of a card grid setup as a parent dynamic block",
 	"example": {},

@@ -1,3 +1,25 @@
 .wp-block-block-templates-card-grid.is-selected {
-	border: 5px dashed rgb(253, 211, 59);
+	border: 1px dashed #27558e;
+}
+
+.wp-block-block-templates-card-grid.wp-block .block-editor-block-list__layout {
+	display: grid;
+	grid-gap: 12px;
+	padding: 8px;
+}
+
+.wp-block-block-templates-card-grid.wp-block.has-2-columns .block-editor-block-list__layout {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.wp-block-block-templates-card-grid.wp-block.has-3-columns .block-editor-block-list__layout {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.wp-block-block-templates-card-grid.wp-block.has-4-columns .block-editor-block-list__layout {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.wp-block-block-templates-card-grid.wp-block.has-5-columns .block-editor-block-list__layout {
+	grid-template-columns: repeat(5, 1fr);
 }

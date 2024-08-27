@@ -2,7 +2,7 @@ import { __ } from '@wordpress/i18n';
 import {
 	useBlockProps,
 	InnerBlocks,
-	useInnerBlocksProps,
+	// useInnerBlocksProps,
 	InspectorControls,
 } from '@wordpress/block-editor';
 import { PanelBody, RangeControl, TextControl } from '@wordpress/components';
@@ -10,12 +10,13 @@ import './editor.scss';
 
 export default function Edit({ attributes, setAttributes }) {
 	const { numberOfColumns, blockHeader } = attributes;
-	const blockProps = useBlockProps();
-	const innerBlocksProps = useInnerBlocksProps(blockProps, {
-		allowedBlocks: ['core/paragraph'],
-		template: [['core/paragraph'], ['core/paragraph']],
-		templateLock: 'all',
-	});
+
+	// const blockProps = useBlockProps();
+	// const innerBlocksProps = useInnerBlocksProps( blockProps, {
+	// 	allowedBlocks: [ 'core/paragraph' ],
+	// 	template: [ [ 'core/paragraph' ], [ 'core/paragraph' ] ],
+	// 	templateLock: 'all',
+	// } );
 
 	return (
 		<>
@@ -41,7 +42,13 @@ export default function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 			</InspectorControls>
 
-			<div {...innerBlocksProps}>
+			{ /* <div {...innerBlocksProps}> */}
+
+			<div
+				{...useBlockProps({
+					className: `has-${numberOfColumns}-columns`,
+				})}
+			>
 				<div>
 					{blockHeader && <h2>{blockHeader}</h2>}
 					<InnerBlocks
